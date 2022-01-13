@@ -20,7 +20,7 @@ class Controller extends Environment
 
     public function __construct()
     {
-        $loader = new FilesystemLoader(__DIR__ . '/../../templates');
+        $loader = new FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . '/../templates');
         parent::__construct($loader, [
             'debug' => true,
             'strict_variables' => true,
