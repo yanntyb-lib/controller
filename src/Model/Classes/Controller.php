@@ -1,6 +1,6 @@
 <?php
 
-namespace Yanntyb\Controller\Classes;
+namespace Yanntyb\Controller\Model\Classes;
 
 
 use Twig\Environment;
