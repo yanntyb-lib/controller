@@ -9,6 +9,7 @@ use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 use Twig\Extension\DebugExtension;
+use Twig\Extra\String\StringExtension;
 use Twig\Loader\FilesystemLoader;
 use Twig\TemplateWrapper;
 
@@ -27,7 +28,7 @@ class Controller extends Environment
             'cache' =>  __DIR__ . '/../../var/cache',
             'auto_reload' => true
         ]);
-
+        $this->addExtension(new StringExtension());
         $this->addExtension(new DebugExtension());
     }
 
